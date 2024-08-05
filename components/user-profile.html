@@ -1,0 +1,73 @@
+<!-- components/user-profile.html -->
+<div class="profile-page">
+    <div class="container">
+      <h1 class="page-title">Your Profile</h1>
+      <div class="profile-content">
+        <div class="profile-info">
+          <h2>Personal Information</h2>
+          <form id="profile-form" class="profile-form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control">
+            </div>
+            <h3>Address</h3>
+            <div class="form-group">
+              <label for="street">Street</label>
+              <input type="text" id="street" name="street" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="number">Number</label>
+              <input type="text" id="number" name="number" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="neighborhood">Neighborhood</label>
+              <input type="text" id="neighborhood" name="neighborhood" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code</label>
+              <input type="text" id="zipCode" name="zipCode" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+          </form>
+        </div>
+        <div class="order-history">
+          <h2>Order History</h2>
+          <div id="order-list">
+            <!-- Order history will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Template for order history item -->
+  <template id="order-item-template">
+    <div class="order-item">
+      <div class="order-header">
+        <span class="order-id"></span>
+        <span class="order-date"></span>
+        <span class="order-status"></span>
+      </div>
+      <div class="order-details">
+        <p class="order-product"></p>
+        <p class="order-quantity"></p>
+        <p class="order-total"></p>
+      </div>
+    </div>
+  </template>

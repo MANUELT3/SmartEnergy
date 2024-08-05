@@ -1,0 +1,44 @@
+<!-- components/cart.html -->
+<div class="cart-page">
+    <div class="container">
+      <h1 class="page-title">Your Cart</h1>
+      <div class="cart-content">
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-item">
+            <span>Shipping:</span>
+            <span id="cart-shipping">$0.00</span>
+          </div>
+          <div class="summary-item total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-button" class="btn btn-primary btn-block">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Template for cart item -->
+  <template id="cart-item-template">
+    <div class="cart-item">
+      <img src="" alt="" class="item-image">
+      <div class="item-details">
+        <h3 class="item-name"></h3>
+        <p class="item-price"></p>
+      </div>
+      <div class="item-quantity">
+        <button class="quantity-btn minus">-</button>
+        <input type="number" class="quantity-input" min="1" value="1">
+        <button class="quantity-btn plus">+</button>
+      </div>
+      <button class="remove-item">Remove</button>
+    </div>
+  </template>

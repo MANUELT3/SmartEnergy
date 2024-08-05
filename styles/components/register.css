@@ -1,0 +1,50 @@
+/* styles/components/register.css */
+
+.register-page .auth-card {
+    max-width: 600px;
+  }
+  
+  .register-page .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .register-page .btn-block {
+    margin-top: 25px;
+  }
+  
+  .form-section-title {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .register-page .auth-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .register-page .form-group {
+      margin-bottom: 0;
+    }
+  
+    .register-page .btn-block,
+    .register-page .form-section-title {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  /* Para mejorar la legibilidad en pantallas pequeñas */
+  @media (max-width: 767px) {
+    .register-page .auth-card {
+      padding: 20px;
+    }
+  
+    .register-page .form-group {
+      margin-bottom: 15px;
+    }
+  }

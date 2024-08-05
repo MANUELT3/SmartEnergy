@@ -1,0 +1,38 @@
+<!-- components/dashboard.html -->
+<div class="dashboard-page">
+    <div class="container">
+      <h1 class="page-title">Energy Dashboard</h1>
+      <div class="dashboard-content">
+        <div class="dashboard-summary">
+          <div class="summary-card">
+            <h3>Total Energy Consumption</h3>
+            <p class="large-number" id="total-consumption">0 kWh</p>
+          </div>
+          <div class="summary-card">
+            <h3>Average Daily Usage</h3>
+            <p class="large-number" id="average-daily">0 kWh</p>
+          </div>
+          <div class="summary-card">
+            <h3>Estimated Monthly Bill</h3>
+            <p class="large-number" id="estimated-bill">$0</p>
+          </div>
+        </div>
+        <div class="dashboard-charts">
+          <div class="chart-container">
+            <h3>Energy Consumption Over Time</h3>
+            <div id="consumption-chart"></div>
+          </div>
+          <div class="chart-container">
+            <h3>Energy Distribution by Device</h3>
+            <div id="distribution-chart"></div>
+          </div>
+        </div>
+        <div class="energy-saving-tips">
+          <h3>Energy Saving Tips</h3>
+          <ul id="tips-list">
+            <!-- Tips will be dynamically inserted here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
