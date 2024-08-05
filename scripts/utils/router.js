@@ -1,6 +1,7 @@
 // scripts/utils/router.js
 
 const router = {
+    base: '/SmartEnergy',
     routes: {
         '/': { component: 'home', requiresAuth: false },
         '/login': { component: 'login', requiresAuth: false },
@@ -23,8 +24,12 @@ const router = {
         this.handleLocation();
     },
 
+    getPath() {
+        return window.location.pathname.replace(this.base, '') || '/';
+    },
+
     handleLocation() {
-        const path = window.location.pathname;
+        const path = this.getPath();
         const route = this.routes[path] || this.routes['/'];
         
         if (route.requiresAuth && !auth.isAuthenticated()) {
@@ -36,13 +41,13 @@ const router = {
     },
 
     navigateTo(url) {
-        history.pushState(null, null, url);
+        window.history.pushState(null, null, this.base + url);
         this.handleLocation();
     },
 
     loadRoute(componentName) {
         const appContainer = document.getElementById('app-container');
-        fetch(`/components/${componentName}.html`)
+        fetch(`${this.base}/components/${componentName}.html`)
             .then(response => response.text())
             .then(html => {
                 appContainer.innerHTML = html;
